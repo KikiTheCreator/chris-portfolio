@@ -1,9 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
 import '../styles/global.css';
+import ProfileHeader from '../components/ProfileHeader.tsx';
+import ProfileInfo from '../components/ProfileInfo.tsx';
+import TabNavigation from '../components/TabNavigation.tsx';
+import Feed from '../components/Feed.tsx';
+import { profileData } from '../data/profileData';
+import { mockPosts } from '../data/posts';
+
+const initialPosts = mockPosts.slice(0, 10);
 ---
 
-<Layout >
-  <Hero />
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{profileData.name} (@{profileData.username})</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body class="bg-[#15202b] min-h-screen">
+  <div class="max-w-3xl mx-auto bg-black sm:border-x border-gray-800 min-h-screen">
+    <ProfileHeader 
+      coverImage={profileData.coverImage}
+      profilePicture={profileData.profilePicture}
+      client:load
+    />
+    
+    <ProfileInfo 
+      name={profileData.name}
+      username={profileData.username}
+      bio={profileData.bio}
+      isVerified={profileData.isVerified}
+      joinDate={profileData.joinDate}
+      followingCount={profileData.followingCount}
+      followersCount={profileData.followersCount}
+      client:load
+    />
+    
+    <TabNavigation client:load />
+    
+    <Feed 
+      initialPosts={initialPosts}
+      allPosts={mockPosts}
+      batchSize={10}
+      client:load
+    />
+  </div>
+</body>
+</html>
