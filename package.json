@@ -6,7 +6,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
@@ -18,6 +22,11 @@
   },
   "devDependencies": {
     "@types/react": "^19.2.13",
-    "@types/react-dom": "^19.2.3"
+    "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
+    "fast-check": "^4.5.3",
+    "jsdom": "^28.0.0",
+    "vitest": "^4.0.18"
   }
 }
