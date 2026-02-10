@@ -3,7 +3,7 @@ import '../styles/global.css';
 import ProfileHeader from '../components/ProfileHeader.tsx';
 import ProfileInfo from '../components/ProfileInfo.tsx';
 import TabNavigation from '../components/TabNavigation.tsx';
-import Feed from '../components/Feed.tsx';
+import FeedWithProvider from '../components/FeedWithProvider.tsx';
 import { profileData } from '../data/profileData';
 import { mockPosts } from '../data/posts';
 
@@ -39,11 +39,11 @@ const initialPosts = mockPosts.slice(0, 10);
     
     <TabNavigation client:load />
     
-    <Feed 
+    <FeedWithProvider 
       initialPosts={initialPosts}
       allPosts={mockPosts}
       batchSize={10}
-      client:load
+      client:only="react"
     />
   </div>
 </body>
