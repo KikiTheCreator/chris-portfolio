@@ -27,7 +27,7 @@ export default function Post({ post }: Props) {
         <img 
           src={post.author.profilePicture} 
           alt={post.author.name}
-          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0"
+          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0 object-cover"
           loading="lazy"
         />
         <div className="flex-1 min-w-0">

@@ -17,7 +17,7 @@ export default function ProfileHeader({ coverImage, profilePicture }: Props) {
         <img 
           src={profilePicture} 
           alt="Profile" 
-          className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-black bg-black"
+          className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-black bg-black object-cover"
         />
       </div>
     </div>
