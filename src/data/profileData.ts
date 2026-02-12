@@ -3,11 +3,11 @@ import type { ProfileData } from '../types';
 export const profileData: ProfileData = {
   name: 'Christopher',
   username: 'Kiki',
-  bio: 'Frontend Developer | React & TypeScript | Building cool stuff with modern web technologies',
+  bio: 'Software engineer',
   profilePicture: '/avatar.jpg',
   coverImage: '/banner.jpg',
   isVerified: true,
   joinDate: 'Oct 2005',
-  followingCount: 234,
-  followersCount: 1547
+  followingCount: 7,
+  followersCount: 13
 };

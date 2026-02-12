@@ -194,7 +194,7 @@ export default function Feed({ initialPosts, allPosts, batchSize = 10 }: Props) 
       <div ref={observerTarget} className="py-4">
         {isFetchingNextPage && (
           <div className="flex justify-center items-center py-8" role="status" aria-live="polite">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-500"></div>
             <span className="sr-only">Loading more posts...</span>
           </div>
         )}
@@ -212,7 +212,7 @@ export default function Feed({ initialPosts, allPosts, batchSize = 10 }: Props) 
             </p>
             <button
               onClick={() => fetchNextPage()}
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
               aria-label="Retry loading posts"
             >
               Retry
