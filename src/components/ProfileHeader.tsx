@@ -10,14 +10,14 @@ export default function ProfileHeader({ coverImage, profilePicture }: Props) {
         <img 
           src={coverImage} 
           alt="Cover" 
-          className="object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
-      <div className="absolute">
+      <div className="absolute  -bottom-12 sm:-bottom-16 left-3 sm:left-4">
         <img 
           src={profilePicture} 
           alt="Kirby"
-          className="rounded-full border-4 border-black bg-black object-cover"
+          className="w-24 h-24 sm:w-32 sm:h-32  rounded-full border-4 border-black bg-black object-cover"
         />
       </div>
     </div>
