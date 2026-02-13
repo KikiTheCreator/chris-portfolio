@@ -28,7 +28,8 @@ export default function Post({ post }: Props) {
           src={post.author.profilePicture} 
           alt={post.author.name}
           className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0 object-cover"
-          loading="lazy"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-1 mb-1 flex-wrap">
@@ -61,7 +62,8 @@ export default function Post({ post }: Props) {
                     post.images!.length === 3 && idx === 0 ? 'col-span-2' :
                     'h-[200px] sm:h-[280px]'
                   }`}
-                  loading="lazy"
+                  fetchPriority="high"
+                  loading="eager"
                 />
               ))}
             </div>
