@@ -2,8 +2,7 @@
 import '../styles/global.css';
 import ProfileHeader from '../components/ProfileHeader.tsx';
 import ProfileInfo from '../components/ProfileInfo.tsx';
-import TabNavigation from '../components/TabNavigation.tsx';
-import FeedWithProvider from '../components/FeedWithProvider.tsx';
+import ProfileTabs from '../components/ProfileTabs.tsx';
 import { profileData } from '../data/profileData';
 import { mockPosts } from '../data/posts';
 
@@ -37,9 +36,7 @@ const initialPosts = mockPosts.slice(0, 9);
       client:load
     />
     
-    <TabNavigation client:load />
-    
-    <FeedWithProvider 
+    <ProfileTabs 
       initialPosts={initialPosts}
       allPosts={mockPosts}
       batchSize={9}
